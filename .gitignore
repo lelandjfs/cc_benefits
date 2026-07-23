@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+.env
+sandbox_transactions.json
+transactions_cache.json
