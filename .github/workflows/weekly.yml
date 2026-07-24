@@ -5,6 +5,9 @@ on:
     - cron: "0 13 * * MON"   # 6am PT Monday
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
