@@ -90,7 +90,7 @@
     {
       "key": "amex_resy",
       "card": "Amex Gold",
-      "label": "Resy Credit",
+      "label": "Resy Dining Credit",
       "period": "semiannual",
       "period_value": 50.0,
       "used": 0.0,
@@ -119,8 +119,8 @@
     },
     {
       "key": "csr_doordash",
-      "card": "Chase CSR",
-      "label": "DoorDash Credit",
+      "card": "Chase Sapphire Reserve",
+      "label": "DoorDash Credit + DashPass",
       "period": "monthly",
       "period_value": 25.0,
       "used": 25.0,
@@ -170,7 +170,7 @@
     },
     {
       "key": "csr_lyft",
-      "card": "Chase CSR",
+      "card": "Chase Sapphire Reserve",
       "label": "Lyft Credit",
       "period": "monthly",
       "period_value": 10.0,
@@ -286,7 +286,7 @@
     },
     {
       "key": "csr_peloton",
-      "card": "Chase CSR",
+      "card": "Chase Sapphire Reserve",
       "label": "Peloton Credit",
       "period": "monthly",
       "period_value": 10.0,
@@ -301,7 +301,7 @@
     },
     {
       "key": "csr_chase_travel_hotel",
-      "card": "Chase CSR",
+      "card": "Chase Sapphire Reserve",
       "label": "Chase Travel Hotel Credit",
       "period": "annual",
       "period_value": 250.0,
@@ -327,7 +327,7 @@
     },
     {
       "key": "csr_edit_hotel",
-      "card": "Chase CSR",
+      "card": "Chase Sapphire Reserve",
       "label": "The Edit Hotel Credit",
       "period": "semiannual",
       "period_value": 250.0,
@@ -342,7 +342,7 @@
     },
     {
       "key": "csr_dining",
-      "card": "Chase CSR",
+      "card": "Chase Sapphire Reserve",
       "label": "Dining Credit (Exclusive Tables)",
       "period": "semiannual",
       "period_value": 150.0,
@@ -357,8 +357,8 @@
     },
     {
       "key": "csr_stubhub",
-      "card": "Chase CSR",
-      "label": "StubHub / viagogo",
+      "card": "Chase Sapphire Reserve",
+      "label": "StubHub / viagogo Credit",
       "period": "semiannual",
       "period_value": 150.0,
       "used": 0.0,
@@ -372,7 +372,7 @@
     },
     {
       "key": "csr_travel",
-      "card": "Chase CSR",
+      "card": "Chase Sapphire Reserve",
       "label": "Annual Travel Credit",
       "period": "annual",
       "period_value": 300.0,
@@ -382,116 +382,6 @@
       "reset_date": "2027-01-01",
       "days_to_reset": 161,
       "matched_txns": [
-        {
-          "date": "2026-06-13",
-          "amount": 27.85,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-06-12",
-          "amount": 11.93,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-06-06",
-          "amount": 8.73,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-06-06",
-          "amount": 14.21,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-05-29",
-          "amount": 27.0,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-05-14",
-          "amount": 13.98,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-05-14",
-          "amount": 28.39,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-05-14",
-          "amount": 51.98,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-05-12",
-          "amount": 10.16,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-05-10",
-          "amount": 2.94,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-05-06",
-          "amount": 1980.75,
-          "merchant": "Brickell Travel Man"
-        },
-        {
-          "date": "2026-04-27",
-          "amount": 41.77,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-04-27",
-          "amount": 45.54,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-18",
-          "amount": 11.58,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-18",
-          "amount": 13.93,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-18",
-          "amount": 13.97,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-14",
-          "amount": 12.95,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-09",
-          "amount": 48.59,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-07",
-          "amount": 8.26,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-06",
-          "amount": 29.72,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-07-05",
-          "amount": 30.88,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-06-24",
-          "amount": 15.81,
-          "merchant": "Uber"
-        },
         {
           "date": "2026-04-28",
           "amount": 8.92,
