@@ -9,6 +9,8 @@ keeps a rolling local cache, runs the benefits engine, and writes:
 Env (from GitHub Secrets):
   PLAID_CLIENT_ID, PLAID_SECRET, PLAID_ENV (default production),
   PLAID_ACCESS_TOKENS = '{"Amex Gold":"access-...","Chase CSR":"access-..."}'
+  (dict keys are just internal labels for the tokens; CARD_DISPLAY below maps
+  them to the card names used in the Sheet/benefits_engine RULES.)
 """
 import os, json, sys
 from datetime import date, datetime, timezone
@@ -21,6 +23,7 @@ ENV       = os.environ.get("PLAID_ENV", "production")
 BASE      = f"https://{ENV}.plaid.com"
 TOKENS    = json.loads(os.environ["PLAID_ACCESS_TOKENS"])
 CACHE     = "transactions_cache.json"
+CARD_DISPLAY = {"Amex Gold": "Amex Gold", "Chase CSR": "Chase Sapphire Reserve"}
 
 
 def call(path, payload):
@@ -53,6 +56,7 @@ def sync_card(label, access_token, state):
                 "merchant_name": t.get("merchant_name"),
                 "name": t.get("name"),
                 "category": (t.get("personal_finance_category") or {}).get("primary"),
+                "card": CARD_DISPLAY.get(label, label),
             }
         for t in resp["removed"]:
             st["txns"].pop(t["transaction_id"], None)

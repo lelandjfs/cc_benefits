@@ -22,7 +22,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: transactions_cache.json
-          key: plaid-txn-cache
+          key: plaid-txn-cache-v2
 
       - run: pip install -r requirements.txt
 

@@ -44,31 +44,31 @@ RULES: list[BenefitRule] = [
                 "(Goldbelly/Wine.com dropped as partners 7/1/2026.)"),
     BenefitRule("amex_dunkin", "Amex Gold", "Dunkin' Credit", "monthly", 7.0,
                 r"dunkin", "Enrollment required."),
-    BenefitRule("amex_resy", "Amex Gold", "Resy Credit", "semiannual", 50.0,
+    BenefitRule("amex_resy", "Amex Gold", "Resy Dining Credit", "semiannual", 50.0,
                 r"resy", "US Resy-eligible restaurants. From 8/1/2026 restaurant must show "
                 "'Resy Credit eligible' badge — not all Resy restaurants qualify."),
     BenefitRule("amex_hotel_collection", "Amex Gold", "Hotel Collection Credit", "monthly", 100.0,
                 r"amex travel", "Book via Amex Travel, Hotel Collection properties, 2-night min. "
                 "Treated as a per-stay credit (monthly bucket is an approximation)."),
     # ---- Chase Sapphire Reserve ---- (post 2026 Edit/hotel-credit update)
-    BenefitRule("csr_doordash", "Chase CSR", "DoorDash Credit", "monthly", 25.0,
+    BenefitRule("csr_doordash", "Chase Sapphire Reserve", "DoorDash Credit + DashPass", "monthly", 25.0,
                 r"doordash|door dash", "Requires DashPass activation."),
-    BenefitRule("csr_lyft", "Chase CSR", "Lyft Credit", "monthly", 10.0,
+    BenefitRule("csr_lyft", "Chase Sapphire Reserve", "Lyft Credit", "monthly", 10.0,
                 r"\blyft\b", "In-app credit. Card must be linked in Lyft."),
-    BenefitRule("csr_peloton", "Chase CSR", "Peloton Credit", "monthly", 10.0,
+    BenefitRule("csr_peloton", "Chase Sapphire Reserve", "Peloton Credit", "monthly", 10.0,
                 r"peloton", "Requires eligible Peloton App/All-Access membership. Thru 12/31/2027."),
-    BenefitRule("csr_chase_travel_hotel", "Chase CSR", "Chase Travel Hotel Credit", "annual", 250.0,
+    BenefitRule("csr_chase_travel_hotel", "Chase Sapphire Reserve", "Chase Travel Hotel Credit", "annual", 250.0,
                 r"chase travel", "IHG, Montage, Pendry, Omni, Virgin Hotels, Minor Hotels, Pan Pacific only. "
                 "Promo thru 12/31/2026."),
-    BenefitRule("csr_edit_hotel", "Chase CSR", "The Edit Hotel Credit", "semiannual", 250.0,
+    BenefitRule("csr_edit_hotel", "Chase Sapphire Reserve", "The Edit Hotel Credit", "semiannual", 250.0,
                 r"the edit", "Prepaid The Edit hotels via Chase Travel, 2-night min. Max 2 stays/yr ($500)."),
-    BenefitRule("csr_dining", "Chase CSR", "Dining Credit (Exclusive Tables)", "semiannual", 150.0,
+    BenefitRule("csr_dining", "Chase Sapphire Reserve", "Dining Credit (Exclusive Tables)", "semiannual", 150.0,
                 r"sapphire reserve|exclusive tables", "Restaurant must be on the LIVE OpenTable "
                 "'Sapphire Reserve Exclusive Tables' list — merchant match alone can't confirm eligibility, "
                 "cross-check the Dining Lists tab."),
-    BenefitRule("csr_stubhub", "Chase CSR", "StubHub / viagogo", "semiannual", 150.0,
+    BenefitRule("csr_stubhub", "Chase Sapphire Reserve", "StubHub / viagogo Credit", "semiannual", 150.0,
                 r"stubhub|viagogo", "Enrollment required."),
-    BenefitRule("csr_travel", "Chase CSR", "Annual Travel Credit", "annual", 300.0,
+    BenefitRule("csr_travel", "Chase Sapphire Reserve", "Annual Travel Credit", "annual", 300.0,
                 r"airline|hotel|airlines|travel|amtrak|marriott|hyatt|united|delta|"
                 r"uber|lyft|parking|toll|transit", "Auto-applies to broad travel spend."),
 ]
@@ -133,6 +133,8 @@ def apply_transactions(transactions: list[dict], today: date) -> list[BenefitSta
         pat = re.compile(r.merchant_regex, re.I)
         spend = 0.0
         for t in transactions:
+            if t.get("card") != r.card:      # never let one card's spend count toward another card's benefit
+                continue
             d = _txn_date(t)
             if not (start <= d < end):
                 continue
