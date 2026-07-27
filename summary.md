@@ -1,10 +1,10 @@
-# Benefits usage — 2026-07-24
+# Benefits usage — 2026-07-27
 
 ## ⏰ Resets soon — still unclaimed
-- **Amex Gold Dining Credit**: $10 left, resets 2026-08-01 (8d). Grubhub, Cheesecake Factory, Five Guys, BWW, Wonder. Enrollment required. (Goldbelly/Wine.com dropped as partners 7/1/2026.)
-- **Amex Gold Dunkin' Credit**: $7 left, resets 2026-08-01 (8d). Enrollment required.
-- **Amex Gold Hotel Collection Credit**: $100 left, resets 2026-08-01 (8d). Book via Amex Travel, Hotel Collection properties, 2-night min. Treated as a per-stay credit (monthly bucket is an approximation).
-- **Chase Sapphire Reserve Peloton Credit**: $10 left, resets 2026-08-01 (8d). Requires eligible Peloton App/All-Access membership. Thru 12/31/2027.
+- **Amex Gold Dining Credit**: $10 left, resets 2026-08-01 (5d). Grubhub, Cheesecake Factory, Five Guys, BWW, Wonder. Enrollment required. (Goldbelly/Wine.com dropped as partners 7/1/2026.)
+- **Amex Gold Dunkin' Credit**: $7 left, resets 2026-08-01 (5d). Enrollment required.
+- **Amex Gold Hotel Collection Credit**: $100 left, resets 2026-08-01 (5d). Book via Amex Travel, Hotel Collection properties, 2-night min. Treated as a per-stay credit (monthly bucket is an approximation).
+- **Chase Sapphire Reserve Peloton Credit**: $10 left, resets 2026-08-01 (5d). Requires eligible Peloton App/All-Access membership. Thru 12/31/2027.
 
 ## All benefits ($727 total still available this period)
 - ✅ Amex Gold Uber Cash: used $10 / $10 → $0 left (resets 2026-08-01)

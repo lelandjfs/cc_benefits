@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-24",
+  "generated": "2026-07-27",
   "benefits": [
     {
       "key": "amex_uber",
@@ -11,7 +11,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-08-01",
-      "days_to_reset": 8,
+      "days_to_reset": 5,
       "matched_txns": [
         {
           "date": "2026-07-18",
@@ -67,7 +67,7 @@
       "remaining": 10.0,
       "status": "Unused",
       "reset_date": "2026-08-01",
-      "days_to_reset": 8,
+      "days_to_reset": 5,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Grubhub, Cheesecake Factory, Five Guys, BWW, Wonder. Enrollment required. (Goldbelly/Wine.com dropped as partners 7/1/2026.)"
@@ -82,7 +82,7 @@
       "remaining": 7.0,
       "status": "Unused",
       "reset_date": "2026-08-01",
-      "days_to_reset": 8,
+      "days_to_reset": 5,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Enrollment required."
@@ -97,7 +97,7 @@
       "remaining": 50.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 161,
+      "days_to_reset": 158,
       "matched_txns": [],
       "credit_posted": false,
       "note": "US Resy-eligible restaurants. From 8/1/2026 restaurant must show 'Resy Credit eligible' badge \u2014 not all Resy restaurants qualify."
@@ -112,7 +112,7 @@
       "remaining": 100.0,
       "status": "Unused",
       "reset_date": "2026-08-01",
-      "days_to_reset": 8,
+      "days_to_reset": 5,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Book via Amex Travel, Hotel Collection properties, 2-night min. Treated as a per-stay credit (monthly bucket is an approximation)."
@@ -127,18 +127,8 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-08-01",
-      "days_to_reset": 8,
+      "days_to_reset": 5,
       "matched_txns": [
-        {
-          "date": "2026-07-23",
-          "amount": 48.25,
-          "merchant": "DoorDash"
-        },
-        {
-          "date": "2026-07-23",
-          "amount": 24.14,
-          "merchant": "Tendergre"
-        },
         {
           "date": "2026-07-10",
           "amount": 40.54,
@@ -163,6 +153,16 @@
           "date": "2026-07-22",
           "amount": 14.82,
           "merchant": "Louscafe"
+        },
+        {
+          "date": "2026-07-23",
+          "amount": 12.61,
+          "merchant": "Superdupe"
+        },
+        {
+          "date": "2026-07-26",
+          "amount": 72.39,
+          "merchant": "DoorDash"
         }
       ],
       "credit_posted": false,
@@ -178,13 +178,8 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-08-01",
-      "days_to_reset": 8,
+      "days_to_reset": 5,
       "matched_txns": [
-        {
-          "date": "2026-07-23",
-          "amount": 12.01,
-          "merchant": "Lyft"
-        },
         {
           "date": "2026-07-23",
           "amount": 10.99,
@@ -198,36 +193,6 @@
         {
           "date": "2026-07-23",
           "amount": -20.97,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-21",
-          "amount": 5.0,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-21",
-          "amount": 15.97,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-21",
-          "amount": -12.46,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-20",
-          "amount": -12.8,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-19",
-          "amount": 7.46,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-19",
-          "amount": 5.0,
           "merchant": "Lyft"
         },
         {
@@ -279,6 +244,46 @@
           "date": "2026-07-21",
           "amount": 14.92,
           "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 9.56,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 12.8,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 22.94,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-23",
+          "amount": 22.37,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-25",
+          "amount": -28.0,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-26",
+          "amount": 5.0,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-26",
+          "amount": 55.7,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-26",
+          "amount": 25.6,
+          "merchant": "Lyft"
         }
       ],
       "credit_posted": true,
@@ -294,7 +299,7 @@
       "remaining": 10.0,
       "status": "Unused",
       "reset_date": "2026-08-01",
-      "days_to_reset": 8,
+      "days_to_reset": 5,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Requires eligible Peloton App/All-Access membership. Thru 12/31/2027."
@@ -309,7 +314,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2027-01-01",
-      "days_to_reset": 161,
+      "days_to_reset": 158,
       "matched_txns": [
         {
           "date": "2026-05-29",
@@ -335,7 +340,7 @@
       "remaining": 250.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 161,
+      "days_to_reset": 158,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Prepaid The Edit hotels via Chase Travel, 2-night min. Max 2 stays/yr ($500)."
@@ -350,7 +355,7 @@
       "remaining": 150.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 161,
+      "days_to_reset": 158,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Restaurant must be on the LIVE OpenTable 'Sapphire Reserve Exclusive Tables' list \u2014 merchant match alone can't confirm eligibility, cross-check the Dining Lists tab."
@@ -365,7 +370,7 @@
       "remaining": 150.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 161,
+      "days_to_reset": 158,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Enrollment required."
@@ -380,7 +385,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2027-01-01",
-      "days_to_reset": 161,
+      "days_to_reset": 158,
       "matched_txns": [
         {
           "date": "2026-04-28",
@@ -489,11 +494,6 @@
         },
         {
           "date": "2026-07-23",
-          "amount": 12.01,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-23",
           "amount": 10.99,
           "merchant": "Lyft"
         },
@@ -505,36 +505,6 @@
         {
           "date": "2026-07-23",
           "amount": -20.97,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-21",
-          "amount": 5.0,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-21",
-          "amount": 15.97,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-21",
-          "amount": -12.46,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-20",
-          "amount": -12.8,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-19",
-          "amount": 7.46,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-07-19",
-          "amount": 5.0,
           "merchant": "Lyft"
         },
         {
@@ -605,6 +575,46 @@
         {
           "date": "2026-07-21",
           "amount": 14.92,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 9.56,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 12.8,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-24",
+          "amount": 22.94,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-23",
+          "amount": 22.37,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-25",
+          "amount": -28.0,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-26",
+          "amount": 5.0,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-26",
+          "amount": 55.7,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-07-26",
+          "amount": 25.6,
           "merchant": "Lyft"
         }
       ],
