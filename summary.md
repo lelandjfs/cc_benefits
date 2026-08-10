@@ -1,12 +1,12 @@
-# Benefits usage — 2026-08-03
+# Benefits usage — 2026-08-10
 
-## All benefits ($740 total still available this period)
+## All benefits ($735 total still available this period)
 - 🟨 Amex Gold Uber Cash: used $2 / $10 → $8 left (resets 2026-09-01)
 - ⬜ Amex Gold Dining Credit: used $0 / $10 → $10 left (resets 2026-09-01)
 - ⬜ Amex Gold Dunkin' Credit: used $0 / $7 → $7 left (resets 2026-09-01)
 - ⬜ Amex Gold Resy Dining Credit: used $0 / $50 → $50 left (resets 2027-01-01)
 - ⬜ Amex Gold Hotel Collection Credit: used $0 / $100 → $100 left (resets 2026-09-01)
-- 🟨 Chase Sapphire Reserve DoorDash Credit + DashPass: used $20 / $25 → $5 left (resets 2026-09-01)
+- ✅ Chase Sapphire Reserve DoorDash Credit + DashPass: used $25 / $25 → $0 left (resets 2026-09-01)
 - ✅ Chase Sapphire Reserve Lyft Credit: used $10 / $10 → $0 left (resets 2026-09-01)
 - ⬜ Chase Sapphire Reserve Peloton Credit: used $0 / $10 → $10 left (resets 2026-09-01)
 - ✅ Chase Sapphire Reserve Chase Travel Hotel Credit: used $250 / $250 → $0 left (resets 2027-01-01)
