@@ -73,8 +73,11 @@ RULES: list[BenefitRule] = [
                 per_txn_cap=250.0),
     BenefitRule("csr_dining", "Chase Sapphire Reserve", "Dining Credit (Exclusive Tables)", "semiannual", 150.0,
                 r"sapphire reserve|exclusive tables", "Restaurant must be on the LIVE OpenTable "
-                "'Sapphire Reserve Exclusive Tables' list — merchant match alone can't confirm eligibility, "
-                "cross-check the Dining Lists tab."),
+                "'Sapphire Reserve Exclusive Tables' list. The underlying restaurant charge can't be "
+                "matched directly — Plaid shows the restaurant's own name, not 'exclusive tables' — so "
+                "detection watches for Chase's own credit-posting line item instead, "
+                "e.g. 'DINING CREDIT $300/YEAR'.",
+                credit_regex=r"dining credit"),
     BenefitRule("csr_stubhub", "Chase Sapphire Reserve", "StubHub / viagogo Credit", "semiannual", 150.0,
                 r"stubhub|viagogo", "Enrollment required."),
     BenefitRule("csr_travel", "Chase Sapphire Reserve", "Annual Travel Credit", "annual", 300.0,
@@ -164,6 +167,7 @@ def apply_transactions(transactions: list[dict], today: date) -> list[BenefitSta
             days_to_reset=(reset - today).days, note=r.note,
         )
         pat = re.compile(r.merchant_regex, re.I)
+        credit_pat = re.compile(r.credit_regex, re.I) if r.credit_regex else None
         spend = 0.0
         for t in transactions:
             if t.get("card") != r.card:      # never let one card's spend count toward another card's benefit
@@ -171,18 +175,25 @@ def apply_transactions(transactions: list[dict], today: date) -> list[BenefitSta
             d = _txn_date(t)
             if not (start <= d < end):
                 continue
-            if not pat.search(_merchant_text(t)):
-                continue
+            text = _merchant_text(t)
             amt = float(t["amount"])
             if amt > 0:                      # a charge (qualifying spend)
+                if not pat.search(text):
+                    continue
                 contrib = min(amt, r.per_txn_cap) if r.per_txn_cap is not None else amt
                 spend += contrib
                 st.matched_txns.append({"date": t["date"], "amount": amt,
                                          "merchant": t.get("merchant_name") or t.get("name")})
             elif amt < 0:                    # a credit/refund posted
+                is_credit_posting = bool(credit_pat and credit_pat.search(text))
+                if not (pat.search(text) or is_credit_posting):
+                    continue
                 st.credit_posted = True
                 st.matched_txns.append({"date": t["date"], "amount": amt,
                                          "merchant": t.get("merchant_name") or t.get("name")})
+                if is_credit_posting:        # issuer's own credit posting is definitive proof of usage
+                    contrib = min(-amt, r.per_txn_cap) if r.per_txn_cap is not None else -amt
+                    spend += contrib
         if r.uncapped:
             st.used = round(spend, 2)
             st.remaining = 0.0    # nothing "at risk" — this benefit doesn't expire or run out
