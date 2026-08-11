@@ -10,7 +10,7 @@ Env:
 The service account must be shared as an Editor on the sheet.
 """
 import os, json
-from datetime import date
+from datetime import datetime, timezone
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
@@ -22,6 +22,8 @@ TAB = "Usage Tracker"
 # A Card | B Benefit | C Period | D Value Available | E Period $ Value |
 # F Used ($) | G Remaining($, formula) | H Status | I Reset Date | J Days to Reset |
 # K Evidence | L Confirmed Using | M Urgency
+# O1 — "Last sync: <timestamp>", rewritten every run so it's obvious at a glance whether
+# the Sheet is current without checking GitHub Actions.
 URGENCY_DAYS = 14
 USAGE_TRACKER_GID = 974407183
 
@@ -58,7 +60,11 @@ def main():
         spreadsheetId=SHEET_ID, range=f"'{TAB}'!A2:M200"
     ).execute().get("values", [])
 
-    updates = []
+    last_run = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    updates = [{
+        "range": f"'{TAB}'!O1",
+        "values": [[f"Last sync: {last_run}"]],
+    }]
     color_requests = []
     for i, row in enumerate(existing):
         if len(row) < 2:
@@ -102,7 +108,7 @@ def main():
         ).execute()
     if color_requests:
         svc.spreadsheets().batchUpdate(spreadsheetId=SHEET_ID, body={"requests": color_requests}).execute()
-    print(f"Updated {len(updates)} rows in '{TAB}' — {date.today().isoformat()}")
+    print(f"Updated {len(updates) - 1} rows in '{TAB}' — {last_run}")
 
 
 if __name__ == "__main__":
