@@ -146,7 +146,7 @@ catalog = [
 ("Amex Gold", "Membership / Access", "Hertz Five Star (Gold+ Rewards)", "Included (new 2026)", "Ongoing", "Enroll in Hertz Gold Plus Rewards", "Vehicle upgrades, free additional driver.", "", "americanexpress.com/us/credit-cards/card/gold-card"),
 
 # ---------------- Amex Gold: Insurance ----------------
-("Amex Gold", "Insurance / Protection", "Purchase Protection", "Theft/damage coverage", "90 days from purchase", "No", "", "", "global.americanexpress.com/card-benefits"),
+("Amex Gold", "Insurance / Protection", "Purchase Protection", "$10,000/item, $50,000/acct/yr", "90 days from purchase", "No", "Theft/damage coverage.", "", "global.americanexpress.com/card-benefits/detail/purchase-protection/amex-gold"),
 ("Amex Gold", "Insurance / Protection", "Extended Warranty", "Up to $10,000/item, $50,000/acct/yr", "Adds 1 yr to warranties <=5 yrs", "No", "", "", "global.americanexpress.com/card-benefits/detail/extended-warranty/amex-gold"),
 ("Amex Gold", "Insurance / Protection", "Baggage Insurance", "$1,250 carry-on / $500 checked", "Per trip", "No", "Excess coverage over common carrier.", "", "global.americanexpress.com/card-benefits/detail/baggage-insurance-plan-basic/gold"),
 ]
@@ -217,7 +217,7 @@ guide = [
     ("Restaurants / Dining", "Amex Gold", "3x", "4x (cap $50k/yr)", "Amex Gold earns higher on dining up to the cap; after cap, compare to CSR's flat 3x."),
     ("US Supermarkets / Groceries", "Amex Gold", "1x", "4x (cap $25k/yr)", "CSR has no grocery bonus category."),
     ("Flights - direct or issuer portal", "Chase Sapphire Reserve", "8x (Chase Travel) / 4x (direct)", "3x", "Chase Travel portal booking beats Amex's 3x; if booking direct, CSR's 4x still edges Amex's 3x."),
-    ("Hotels - prepaid via issuer travel site", "Amex Gold", "8x (Chase Travel)", "5x (Amex Travel)", "Chase Travel portal (8x) beats Amex Travel (5x) - use CSR if booking through a portal."),
+    ("Hotels - prepaid via issuer travel site", "Chase Sapphire Reserve", "8x (Chase Travel)", "5x (Amex Travel)", "Chase Travel portal (8x) beats Amex Travel (5x) - use CSR if booking through a portal."),
     ("Hotels - booked direct with hotel", "Chase Sapphire Reserve", "4x", "1x", "CSR's direct-booking bonus doesn't exist on Amex Gold."),
     ("Rideshare (Lyft)", "Chase Sapphire Reserve", "5x (thru 9/30/2027)", "1x", "Lyft-specific CSR bonus; Amex Gold has no rideshare multiplier (Uber gets Uber Cash instead, not points)."),
     ("Uber", "Amex Gold", "1x (+ no Uber Cash)", "1x + $10/mo Uber Cash", "Amex Gold's Uber Cash is a direct-dollar credit; use it there, use Lyft on CSR."),
