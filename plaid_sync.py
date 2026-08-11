@@ -96,7 +96,8 @@ def main():
         lines.append("")
     lines.append(f"## All benefits (${unclaimed:.0f} total still available this period)")
     for s in statuses:
-        tick = {"Fully used": "✅", "Partially used": "🟨", "Unused": "⬜"}.get(s.status, "•")
+        tick = {"Fully used": "✅", "Partially used": "🟨", "Unused": "⬜",
+                "Ongoing (uncapped)": "♾️", "Available (uncapped)": "♾️"}.get(s.status, "•")
         lines.append(f"- {tick} {s.card} {s.label}: used ${s.used:.0f} / ${s.period_value:.0f} "
                      f"→ ${s.remaining:.0f} left (resets {s.reset_date})")
     with open("summary.md", "w") as f:
