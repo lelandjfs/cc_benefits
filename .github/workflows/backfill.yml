@@ -21,5 +21,6 @@ jobs:
           PLAID_SECRET: ${{ secrets.PLAID_SECRET }}
           PLAID_ENV: ${{ secrets.PLAID_ENV }}
           PLAID_ACCESS_TOKENS: ${{ secrets.PLAID_ACCESS_TOKENS }}
-          SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
         run: python3 backfill_supabase.py
