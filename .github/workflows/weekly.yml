@@ -18,20 +18,16 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Restore transaction cache
-        uses: actions/cache@v4
-        with:
-          path: transactions_cache.json
-          key: plaid-txn-cache-v2
-
       - run: pip install -r requirements.txt
 
-      - name: Sync Plaid transactions + compute benefit usage
+      - name: Sync Plaid transactions (into Supabase) + compute benefit usage
         env:
           PLAID_CLIENT_ID: ${{ secrets.PLAID_CLIENT_ID }}
           PLAID_SECRET: ${{ secrets.PLAID_SECRET }}
           PLAID_ENV: ${{ secrets.PLAID_ENV }}
           PLAID_ACCESS_TOKENS: ${{ secrets.PLAID_ACCESS_TOKENS }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
         run: python3 plaid_sync.py
 
       - name: Push usage into Google Sheet
@@ -40,7 +36,7 @@ jobs:
           GOOGLE_SHEET_ID: ${{ secrets.GOOGLE_SHEET_ID }}
         run: python3 sheet_updater.py
 
-      - name: Commit updated cache + outputs
+      - name: Commit updated outputs
         run: |
           git config user.name "benefits-bot"
           git config user.email "actions@users.noreply.github.com"
