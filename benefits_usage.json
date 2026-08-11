@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-10",
+  "generated": "2026-08-11",
   "benefits": [
     {
       "key": "amex_uber",
@@ -7,19 +7,34 @@
       "label": "Uber Cash",
       "period": "monthly",
       "period_value": 10.0,
-      "used": 1.95,
-      "remaining": 8.05,
-      "status": "Partially used",
+      "used": 10.0,
+      "remaining": 0.0,
+      "status": "Fully used",
       "reset_date": "2026-09-01",
-      "days_to_reset": 22,
+      "days_to_reset": 21,
       "matched_txns": [
         {
           "date": "2026-08-02",
           "amount": 1.95,
           "merchant": "Uber"
+        },
+        {
+          "date": "2026-08-10",
+          "amount": -14.2,
+          "merchant": "Uber"
+        },
+        {
+          "date": "2026-08-10",
+          "amount": 14.2,
+          "merchant": "Uber"
+        },
+        {
+          "date": "2026-08-10",
+          "amount": 20.88,
+          "merchant": "Uber"
         }
       ],
-      "credit_posted": false,
+      "credit_posted": true,
       "note": "Uber & Uber Eats. Card must be linked in the Uber app."
     },
     {
@@ -32,7 +47,7 @@
       "remaining": 10.0,
       "status": "Unused",
       "reset_date": "2026-09-01",
-      "days_to_reset": 22,
+      "days_to_reset": 21,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Grubhub, Cheesecake Factory, Five Guys, BWW, Wonder. Enrollment required. (Goldbelly/Wine.com dropped as partners 7/1/2026.)"
@@ -47,7 +62,7 @@
       "remaining": 7.0,
       "status": "Unused",
       "reset_date": "2026-09-01",
-      "days_to_reset": 22,
+      "days_to_reset": 21,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Enrollment required."
@@ -62,7 +77,7 @@
       "remaining": 50.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 144,
+      "days_to_reset": 143,
       "matched_txns": [],
       "credit_posted": false,
       "note": "US Resy-eligible restaurants. From 8/1/2026 restaurant must show 'Resy Credit eligible' badge \u2014 not all Resy restaurants qualify."
@@ -71,16 +86,16 @@
       "key": "amex_hotel_collection",
       "card": "Amex Gold",
       "label": "Hotel Collection Credit",
-      "period": "monthly",
+      "period": "annual",
       "period_value": 100.0,
       "used": 0.0,
-      "remaining": 100.0,
-      "status": "Unused",
-      "reset_date": "2026-09-01",
-      "days_to_reset": 22,
+      "remaining": 0.0,
+      "status": "Available (uncapped)",
+      "reset_date": "2027-07-02",
+      "days_to_reset": 325,
       "matched_txns": [],
       "credit_posted": false,
-      "note": "Book via Amex Travel, Hotel Collection properties, 2-night min. Treated as a per-stay credit (monthly bucket is an approximation)."
+      "note": "Book via Amex Travel, Hotel Collection properties, 2-night min. $100 credit per qualifying stay, no monthly cap or expiry \u2014 every stay earns it."
     },
     {
       "key": "csr_doordash",
@@ -92,7 +107,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-09-01",
-      "days_to_reset": 22,
+      "days_to_reset": 21,
       "matched_txns": [
         {
           "date": "2026-08-02",
@@ -128,7 +143,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-09-01",
-      "days_to_reset": 22,
+      "days_to_reset": 21,
       "matched_txns": [
         {
           "date": "2026-08-02",
@@ -174,7 +189,7 @@
       "remaining": 10.0,
       "status": "Unused",
       "reset_date": "2026-09-01",
-      "days_to_reset": 22,
+      "days_to_reset": 21,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Requires eligible Peloton App/All-Access membership. Thru 12/31/2027."
@@ -189,7 +204,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2027-01-01",
-      "days_to_reset": 144,
+      "days_to_reset": 143,
       "matched_txns": [
         {
           "date": "2026-05-29",
@@ -209,16 +224,16 @@
       "key": "csr_edit_hotel",
       "card": "Chase Sapphire Reserve",
       "label": "The Edit Hotel Credit",
-      "period": "semiannual",
-      "period_value": 250.0,
+      "period": "annual",
+      "period_value": 500.0,
       "used": 0.0,
-      "remaining": 250.0,
+      "remaining": 500.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 144,
+      "days_to_reset": 143,
       "matched_txns": [],
       "credit_posted": false,
-      "note": "Prepaid The Edit hotels via Chase Travel, 2-night min. Max 2 stays/yr ($500)."
+      "note": "Prepaid The Edit hotels via Chase Travel, 2-night min. Two $250 credits usable anytime in the calendar year (no half-year split) \u2014 capped at $250/stay, $500/yr total."
     },
     {
       "key": "csr_dining",
@@ -226,14 +241,20 @@
       "label": "Dining Credit (Exclusive Tables)",
       "period": "semiannual",
       "period_value": 150.0,
-      "used": 0.0,
-      "remaining": 150.0,
-      "status": "Unused",
+      "used": 150.0,
+      "remaining": 0.0,
+      "status": "Fully used",
       "reset_date": "2027-01-01",
-      "days_to_reset": 144,
-      "matched_txns": [],
-      "credit_posted": false,
-      "note": "Restaurant must be on the LIVE OpenTable 'Sapphire Reserve Exclusive Tables' list \u2014 merchant match alone can't confirm eligibility, cross-check the Dining Lists tab."
+      "days_to_reset": 143,
+      "matched_txns": [
+        {
+          "date": "2026-07-26",
+          "amount": -150.0,
+          "merchant": "DINING CREDIT $300/YEAR"
+        }
+      ],
+      "credit_posted": true,
+      "note": "Restaurant must be on the LIVE OpenTable 'Sapphire Reserve Exclusive Tables' list. The underlying restaurant charge can't be matched directly \u2014 Plaid shows the restaurant's own name, not 'exclusive tables' \u2014 so detection watches for Chase's own credit-posting line item instead, e.g. 'DINING CREDIT $300/YEAR'."
     },
     {
       "key": "csr_stubhub",
@@ -245,7 +266,7 @@
       "remaining": 150.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 144,
+      "days_to_reset": 143,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Enrollment required."
@@ -259,8 +280,8 @@
       "used": 300.0,
       "remaining": 0.0,
       "status": "Fully used",
-      "reset_date": "2027-01-01",
-      "days_to_reset": 144,
+      "reset_date": "2027-02-13",
+      "days_to_reset": 186,
       "matched_txns": [
         {
           "date": "2026-04-28",
@@ -509,7 +530,7 @@
         }
       ],
       "credit_posted": true,
-      "note": "Auto-applies to broad travel spend."
+      "note": "Auto-applies to broad travel spend. Resets on your CARDMEMBER YEAR (account anniversary \u2014 opened 2/13/2019), not Jan 1. Reset date below is an approximation of the anniversary itself; the real reset is the close of your first statement after it, which can land a few days later depending on your statement cycle."
     }
   ]
 }
