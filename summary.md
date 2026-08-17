@@ -1,4 +1,4 @@
-# Benefits usage — 2026-08-11
+# Benefits usage — 2026-08-17
 
 ## All benefits ($727 total still available this period)
 - ✅ Amex Gold Uber Cash: used $10 / $10 → $0 left (resets 2026-09-01)
