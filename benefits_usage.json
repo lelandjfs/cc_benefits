@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-17",
+  "generated": "2026-08-24",
   "benefits": [
     {
       "key": "amex_uber",
@@ -11,7 +11,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-09-01",
-      "days_to_reset": 15,
+      "days_to_reset": 8,
       "matched_txns": [
         {
           "date": "2026-08-02",
@@ -24,52 +24,37 @@
           "merchant": "Uber"
         },
         {
-          "date": "2026-08-14",
-          "amount": -10.14,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-08-14",
-          "amount": 10.14,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-08-15",
+          "date": "2026-08-16",
           "amount": 11.35,
           "merchant": "Uber"
         },
         {
-          "date": "2026-08-15",
-          "amount": -17.04,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-08-15",
+          "date": "2026-08-16",
           "amount": 12.29,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-08-15",
-          "amount": 17.04,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-08-16",
-          "amount": -9.44,
-          "merchant": "Uber"
-        },
-        {
-          "date": "2026-08-16",
-          "amount": 9.44,
           "merchant": "Uber"
         },
         {
           "date": "2026-08-16",
           "amount": 14.21,
           "merchant": "Uber"
+        },
+        {
+          "date": "2026-08-20",
+          "amount": 7.12,
+          "merchant": "Uber"
+        },
+        {
+          "date": "2026-08-20",
+          "amount": 9.06,
+          "merchant": "Uber"
+        },
+        {
+          "date": "2026-08-22",
+          "amount": 13.62,
+          "merchant": "Uber"
         }
       ],
-      "credit_posted": true,
+      "credit_posted": false,
       "note": "Uber & Uber Eats. Card must be linked in the Uber app."
     },
     {
@@ -82,7 +67,7 @@
       "remaining": 10.0,
       "status": "Unused",
       "reset_date": "2026-09-01",
-      "days_to_reset": 15,
+      "days_to_reset": 8,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Grubhub, Cheesecake Factory, Five Guys, BWW, Wonder. Enrollment required. (Goldbelly/Wine.com dropped as partners 7/1/2026.)"
@@ -97,7 +82,7 @@
       "remaining": 7.0,
       "status": "Unused",
       "reset_date": "2026-09-01",
-      "days_to_reset": 15,
+      "days_to_reset": 8,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Enrollment required."
@@ -112,7 +97,7 @@
       "remaining": 50.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 137,
+      "days_to_reset": 130,
       "matched_txns": [],
       "credit_posted": false,
       "note": "US Resy-eligible restaurants. From 8/1/2026 restaurant must show 'Resy Credit eligible' badge \u2014 not all Resy restaurants qualify."
@@ -127,7 +112,7 @@
       "remaining": 0.0,
       "status": "Available (uncapped)",
       "reset_date": "2027-07-02",
-      "days_to_reset": 319,
+      "days_to_reset": 312,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Book via Amex Travel, Hotel Collection properties, 2-night min. $100 credit per qualifying stay, no monthly cap or expiry \u2014 every stay earns it."
@@ -142,7 +127,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-09-01",
-      "days_to_reset": 15,
+      "days_to_reset": 8,
       "matched_txns": [
         {
           "date": "2026-08-02",
@@ -170,8 +155,13 @@
           "merchant": "Mendocino Farms"
         },
         {
-          "date": "2026-08-16",
+          "date": "2026-08-18",
           "amount": 28.71,
+          "merchant": "Peet's"
+        },
+        {
+          "date": "2026-08-21",
+          "amount": 17.17,
           "merchant": "Peet's"
         }
       ],
@@ -188,7 +178,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2026-09-01",
-      "days_to_reset": 15,
+      "days_to_reset": 8,
       "matched_txns": [
         {
           "date": "2026-08-02",
@@ -216,32 +206,32 @@
           "merchant": "Lyft"
         },
         {
-          "date": "2026-08-14",
-          "amount": 9.82,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-08-14",
-          "amount": 9.88,
-          "merchant": "Lyft"
-        },
-        {
           "date": "2026-08-16",
-          "amount": 9.96,
+          "amount": 18.88,
           "merchant": "Lyft"
         },
         {
-          "date": "2026-08-16",
-          "amount": -19.7,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-08-15",
+          "date": "2026-08-17",
           "amount": 21.93,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-08-18",
+          "amount": 21.63,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-08-19",
+          "amount": 24.99,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-08-21",
+          "amount": 8.8,
           "merchant": "Lyft"
         }
       ],
-      "credit_posted": true,
+      "credit_posted": false,
       "note": "In-app credit. Card must be linked in Lyft."
     },
     {
@@ -254,7 +244,7 @@
       "remaining": 10.0,
       "status": "Unused",
       "reset_date": "2026-09-01",
-      "days_to_reset": 15,
+      "days_to_reset": 8,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Requires eligible Peloton App/All-Access membership. Thru 12/31/2027."
@@ -269,7 +259,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2027-01-01",
-      "days_to_reset": 137,
+      "days_to_reset": 130,
       "matched_txns": [
         {
           "date": "2026-05-29",
@@ -282,7 +272,7 @@
           "merchant": "CL *Chase Travel"
         },
         {
-          "date": "2026-08-15",
+          "date": "2026-08-17",
           "amount": 1843.37,
           "merchant": "CL *Chase Travel"
         }
@@ -300,7 +290,7 @@
       "remaining": 500.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 137,
+      "days_to_reset": 130,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Prepaid The Edit hotels via Chase Travel, 2-night min. Two $250 credits usable anytime in the calendar year (no half-year split) \u2014 capped at $250/stay, $500/yr total."
@@ -315,7 +305,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2027-01-01",
-      "days_to_reset": 137,
+      "days_to_reset": 130,
       "matched_txns": [
         {
           "date": "2026-07-26",
@@ -336,7 +326,7 @@
       "remaining": 150.0,
       "status": "Unused",
       "reset_date": "2027-01-01",
-      "days_to_reset": 137,
+      "days_to_reset": 130,
       "matched_txns": [],
       "credit_posted": false,
       "note": "Enrollment required."
@@ -351,7 +341,7 @@
       "remaining": 0.0,
       "status": "Fully used",
       "reset_date": "2027-02-13",
-      "days_to_reset": 180,
+      "days_to_reset": 173,
       "matched_txns": [
         {
           "date": "2026-04-28",
@@ -595,38 +585,43 @@
         },
         {
           "date": "2026-08-14",
-          "amount": 9.82,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-08-14",
-          "amount": 9.88,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-08-14",
           "amount": 81.7,
           "merchant": "SAN"
         },
         {
           "date": "2026-08-16",
-          "amount": 9.96,
+          "amount": 18.88,
           "merchant": "Lyft"
         },
         {
-          "date": "2026-08-16",
-          "amount": -19.7,
-          "merchant": "Lyft"
-        },
-        {
-          "date": "2026-08-15",
+          "date": "2026-08-17",
           "amount": 21.93,
           "merchant": "Lyft"
         },
         {
-          "date": "2026-08-15",
+          "date": "2026-08-17",
           "amount": 1843.37,
           "merchant": "CL *Chase Travel"
+        },
+        {
+          "date": "2026-08-17",
+          "amount": -250.0,
+          "merchant": "SELECT HOTELS CREDIT $250"
+        },
+        {
+          "date": "2026-08-18",
+          "amount": 21.63,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-08-19",
+          "amount": 24.99,
+          "merchant": "Lyft"
+        },
+        {
+          "date": "2026-08-21",
+          "amount": 8.8,
+          "merchant": "Lyft"
         }
       ],
       "credit_posted": true,
