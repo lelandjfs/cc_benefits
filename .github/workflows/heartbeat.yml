@@ -1,0 +1,25 @@
+name: Supabase heartbeat
+
+# Free-tier Supabase projects get auto-paused after a week without "sufficient"
+# database activity. The weekly sync only touches the DB once a week, which
+# isn't enough on its own — this does one cheap read every day to keep the
+# project active. See https://supabase.com/docs/guides/platform/free-project-pausing
+
+on:
+  schedule:
+    - cron: "0 15 * * *"   # 8am PT daily
+  workflow_dispatch: {}
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Read one row from Supabase
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: |
+          curl -sf "$SUPABASE_URL/rest/v1/sync_state?select=card&limit=1" \
+            -H "apikey: $SUPABASE_SECRET_KEY" \
+            -H "Authorization: Bearer $SUPABASE_SECRET_KEY" \
+            -o /dev/null -w "heartbeat: HTTP %{http_code}\n"
