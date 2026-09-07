@@ -1,19 +1,14 @@
-# Benefits usage — 2026-08-31
-
-## ⏰ Resets soon — still unclaimed
-- **Amex Gold Dining Credit**: $10 left, resets 2026-09-01 (1d). Grubhub, Cheesecake Factory, Five Guys, BWW, Wonder. Enrollment required. (Goldbelly/Wine.com dropped as partners 7/1/2026.)
-- **Amex Gold Dunkin' Credit**: $7 left, resets 2026-09-01 (1d). Enrollment required.
-- **Chase Sapphire Reserve Peloton Credit**: $10 left, resets 2026-09-01 (1d). Requires eligible Peloton App/All-Access membership. Thru 12/31/2027.
+# Benefits usage — 2026-09-07
 
 ## All benefits ($727 total still available this period)
-- ✅ Amex Gold Uber Cash: used $10 / $10 → $0 left (resets 2026-09-01)
-- ⬜ Amex Gold Dining Credit: used $0 / $10 → $10 left (resets 2026-09-01)
-- ⬜ Amex Gold Dunkin' Credit: used $0 / $7 → $7 left (resets 2026-09-01)
+- ✅ Amex Gold Uber Cash: used $10 / $10 → $0 left (resets 2026-10-01)
+- ⬜ Amex Gold Dining Credit: used $0 / $10 → $10 left (resets 2026-10-01)
+- ⬜ Amex Gold Dunkin' Credit: used $0 / $7 → $7 left (resets 2026-10-01)
 - ⬜ Amex Gold Resy Dining Credit: used $0 / $50 → $50 left (resets 2027-01-01)
 - ♾️ Amex Gold Hotel Collection Credit: used $0 / $100 → $0 left (resets 2027-07-02)
-- ✅ Chase Sapphire Reserve DoorDash Credit + DashPass: used $25 / $25 → $0 left (resets 2026-09-01)
-- ✅ Chase Sapphire Reserve Lyft Credit: used $10 / $10 → $0 left (resets 2026-09-01)
-- ⬜ Chase Sapphire Reserve Peloton Credit: used $0 / $10 → $10 left (resets 2026-09-01)
+- ✅ Chase Sapphire Reserve DoorDash Credit + DashPass: used $25 / $25 → $0 left (resets 2026-10-01)
+- ✅ Chase Sapphire Reserve Lyft Credit: used $10 / $10 → $0 left (resets 2026-10-01)
+- ⬜ Chase Sapphire Reserve Peloton Credit: used $0 / $10 → $10 left (resets 2026-10-01)
 - ✅ Chase Sapphire Reserve Chase Travel Hotel Credit: used $250 / $250 → $0 left (resets 2027-01-01)
 - ⬜ Chase Sapphire Reserve The Edit Hotel Credit: used $0 / $500 → $500 left (resets 2027-01-01)
 - ✅ Chase Sapphire Reserve Dining Credit (Exclusive Tables): used $150 / $150 → $0 left (resets 2027-01-01)
