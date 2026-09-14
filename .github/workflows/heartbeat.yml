@@ -1,25 +1,37 @@
 name: Supabase heartbeat
 
-# Free-tier Supabase projects get auto-paused after a week without "sufficient"
-# database activity. The weekly sync only touches the DB once a week, which
-# isn't enough on its own — this does one cheap read every day to keep the
-# project active. See https://supabase.com/docs/guides/platform/free-project-pausing
+# Free-tier Supabase pauses projects with too little user DB activity
+# over 7 days. One daily REST GET was not enough (weekly pause warnings
+# continued after this workflow shipped). Hit two tables, three times a
+# day. Times are UTC; comments are PT. See
+# https://supabase.com/docs/guides/platform/free-project-pausing
+#
+# Reads only — do not write sync_state.cursor (that's the Plaid cursor).
 
 on:
   schedule:
-    - cron: "0 15 * * *"   # 8am PT daily
+    - cron: "0 13 * * *"   # 6am PT
+    - cron: "0 21 * * *"   # 2pm PT
+    - cron: "0 3 * * *"    # 8pm PT
   workflow_dispatch: {}
 
 jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
-      - name: Read one row from Supabase
+      - name: Read from two Supabase tables
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
         run: |
-          curl -sf "$SUPABASE_URL/rest/v1/sync_state?select=card&limit=1" \
-            -H "apikey: $SUPABASE_SECRET_KEY" \
-            -H "Authorization: Bearer $SUPABASE_SECRET_KEY" \
-            -o /dev/null -w "heartbeat: HTTP %{http_code}\n"
+          set -euo pipefail
+          ping() {
+            local path="$1"
+            local label="$2"
+            curl -sf "$SUPABASE_URL/rest/v1/$path" \
+              -H "apikey: $SUPABASE_SECRET_KEY" \
+              -H "Authorization: Bearer $SUPABASE_SECRET_KEY" \
+              -o /dev/null -w "${label}: HTTP %{http_code}\n"
+          }
+          ping "sync_state?select=card&limit=1" "sync_state"
+          ping "transactions?select=plaid_transaction_id&limit=1" "transactions"
