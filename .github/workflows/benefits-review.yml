@@ -1,10 +1,10 @@
-name: Benefits review reminder
+name: Benefits review
 
-# Card issuers change benefit terms/values over time. This can't be verified
-# by a script — it needs someone (or an LLM with web search) to check the
-# current official terms against RULES in benefits_engine.py. This job just
-# opens a tracking issue twice a year; the actual check happens when that
-# issue is picked up (e.g. by pointing Claude Code at it).
+# Card issuers change benefit terms/values over time. This uses the Parallel
+# Task API to research each benefit's current official terms and diff them
+# against RULES in benefits_engine.py, then opens a tracking issue with the
+# findings. Deliberately does NOT auto-edit benefits_engine.py — see
+# check_benefits.py for why.
 
 on:
   schedule:
@@ -15,9 +15,22 @@ permissions:
   issues: write
 
 jobs:
-  open-issue:
+  review:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: Research current benefit terms via Parallel
+        env:
+          PARALLEL_API_KEY: ${{ secrets.PARALLEL_API_KEY }}
+        run: python3 check_benefits.py
+
       - name: Open review issue
         env:
           GH_TOKEN: ${{ github.token }}
@@ -25,18 +38,4 @@ jobs:
           gh issue create \
             --repo "${{ github.repository }}" \
             --title "Semiannual benefits review — $(date -u +%Y-%m-%d)" \
-            --body "$(cat <<'EOF'
-          Time to verify the benefit rules in \`benefits_engine.py\` are still accurate.
-
-          For each rule in \`RULES\` (Amex Gold + Chase Sapphire Reserve):
-          - [ ] Confirm \`period_value\` (dollar amount) still matches the issuer's current terms
-          - [ ] Confirm \`period\` (monthly/semiannual/annual) hasn't changed
-          - [ ] Confirm the benefit still exists at all (issuers retire/replace credits)
-          - [ ] Check for any *new* benefits not yet in \`RULES\`
-          - [ ] Check \`merchant_regex\`/\`credit_regex\` still match how the issuer posts these (e.g. merchant name changes)
-
-          Sources: the official Amex Gold and Chase Sapphire Reserve benefits guides (amex.com / chase.com), not third-party blogs.
-
-          If anything changed, update \`benefits_engine.py\` and open a PR.
-          EOF
-          )"
+            --body-file benefits_review_report.md
