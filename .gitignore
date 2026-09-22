@@ -2,3 +2,7 @@ __pycache__/
 *.pyc
 .env
 .DS_Store
+
+# real transaction-level data — lives in Supabase, not git
+benefits_usage.json
+summary.md

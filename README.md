@@ -1,9 +1,7 @@
 # Card Benefits Tracker
 
 Tracks every benefit on Chase Sapphire Reserve (personal) + Amex Gold, pulls real
-transactions via Plaid, and writes usage into a Google Sheet weekly via GitHub Actions.
-
-Sheet: https://docs.google.com/spreadsheets/d/1lRKGMfQ9QiVRm_hOEZv2-OTBHiZ-jCGSfINPEG3VZvY
+transactions via Plaid, and writes usage into a private Google Sheet weekly via GitHub Actions.
 
 ```
 Plaid (your cards) ──► GitHub Action (weekly) ──► Supabase (durable transaction store)
@@ -82,7 +80,7 @@ CREATE TABLE sync_state (card TEXT PRIMARY KEY, cursor TEXT);
 Repo → **Settings → Secrets and variables → Actions → New repository secret**:
 - `PLAID_CLIENT_ID`, `PLAID_SECRET` (production), `PLAID_ENV=production`, `PLAID_ACCESS_TOKENS` (JSON from step 1)
 - `GOOGLE_SERVICE_ACCOUNT_JSON` — paste the full contents of the JSON key file from step 2
-- `GOOGLE_SHEET_ID` — `1lRKGMfQ9QiVRm_hOEZv2-OTBHiZ-jCGSfINPEG3VZvY`
+- `GOOGLE_SHEET_ID` — the ID from your target Sheet's URL (the segment after `/d/`)
 - `SUPABASE_URL` — the project URL (e.g. `https://<ref>.supabase.co`)
 - `SUPABASE_SECRET_KEY` — the project's secret API key (Project Settings → API Keys). Uses
   PostgREST over HTTPS rather than a raw Postgres connection string, since GitHub Actions
