@@ -90,7 +90,7 @@ RULES: list[BenefitRule] = [
                                            r"petco|petsmart|pet supplies|target|walmart|convenience|flowers|general_merchandise"),
                                     (10.0, r"dashmart|grocery|groceries|safeway|whole foods|trader joe|"
                                            r"sprouts|cvs|walgreens|rite aid|7-eleven|7 eleven|liquor|wine|"
-                                           r"petco|petsmart|pet supplies|target|walmart|convenience")]),
+                                           r"petco|petsmart|pet supplies|target|walmart|convenience|flowers|general_merchandise")]),
                 ]),
     BenefitRule("csr_lyft", "Chase Sapphire Reserve", "Lyft Credit", "monthly", 10.0,
                 r"\blyft\b", "In-app credit. Card must be linked in Lyft. Applied in-app, never a "
