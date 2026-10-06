@@ -92,9 +92,20 @@ Repo → **Actions → Backfill transactions to Supabase → Run workflow** to p
 Then **Actions → Weekly benefits sync → Run workflow** and check the Sheet's Usage Tracker tab updated.
 
 ## Notes
+- **Usage = issuer credit postings.** Benefits that post a statement credit (Amex Resy/Dining/Dunkin';
+  CSR Exclusive Tables dining, StubHub, Select Hotels, The Edit, Peloton, $300 travel) count ONLY the
+  issuer's own credit line (e.g. `AMEX RESY CREDIT`, `STUBHUB CREDIT $300/YEAR`) toward "used"
+  (`basis: credit_posting`). Merchant spend is reported separately as `detected_spend`.
+- Benefits with no statement credit (Amex Uber Cash, CSR DoorDash checkout promos, CSR Lyft in-app
+  credit, Amex Hotel Collection on-property credit) are estimated from qualifying spend
+  (`basis: spend_estimate`). DoorDash is $35/mo from 10/1/2026: one $15 any-order promo + two $10
+  grocery/retail promos, each order filling at most one slot.
+- If a card's Plaid history starts after a period began (e.g. CSR's Feb anniversary year), missing
+  postings can't be seen, so that rule falls back to the spend estimate
+  (`basis: spend_estimate_data_gap`).
 - CSR Exclusive Tables and the Amex Resy credit depend on curated restaurant lists that change
-  weekly/monthly — the engine flags qualifying merchant activity, but the Sheet's Dining Lists tab
-  links the live source since a hardcoded restaurant list would go stale fast.
+  weekly/monthly — the Sheet's Dining Lists tab links the live source.
+- Tests: `python tests/test_benefits_engine.py` (synthetic data only).
 - Global Entry/TSA PreCheck ($120/4yr) isn't auto-tracked (one-time, irregular period) — check it
   off manually in the Sheet when used.
 - Rotate the Plaid secret anytime in the dashboard; re-run `link_setup.py` to refresh tokens.
